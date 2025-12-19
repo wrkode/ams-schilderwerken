@@ -1,0 +1,184 @@
+# Amsterdam Schilderwerken - Git Ignore File
+
+# ==========================================
+# macOS
+# ==========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# ==========================================
+# Windows
+# ==========================================
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# ==========================================
+# Linux
+# ==========================================
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==========================================
+# IDE and Editors
+# ==========================================
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# Cursor
+.cursor/
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+tags
+[._]*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ==========================================
+# Node.js (if you add npm/yarn later)
+# ==========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+.env
+.env.test
+.cache/
+.parcel-cache/
+
+# ==========================================
+# Temporary and Backup Files
+# ==========================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+*.log
+*.old
+
+# ==========================================
+# Image Processing Temporary Files
+# ==========================================
+*-temp.png
+*-preview.png
+*-converted.*
+*.pdf.png
+.thumbnails/
+
+# ==========================================
+# Build and Distribution
+# ==========================================
+dist/
+build/
+*.min.js
+*.min.css
+
+# ==========================================
+# Project Specific
+# ==========================================
+# Keep the original EPS and PDF files but ignore conversions
+# (Uncomment if you want to ignore large source files)
+# *.eps
+# *.pdf
+
+# Ignore large unoptimized images
+# images/*-original.*
+# images/*-unoptimized.*
+
+# Testing and development
+test/
+tests/
+*.test.js
+coverage/
+
+# ==========================================
+# Deployment
+# ==========================================
+.deploy/
+.netlify/
+.vercel/
+
+# ==========================================
+# Misc
+# ==========================================
+*.pid
+*.seed
+*.pid.lock
+.sass-cache/
+*.css.map
+*.js.map
+.grunt
+bower_components/
+.lock-wscript
+
+field-items/
