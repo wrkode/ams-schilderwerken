@@ -112,27 +112,10 @@ html {
    ========================================== */
 
 .hero-section {
-    background: linear-gradient(135deg, var(--rolex-black) 0%, #1a2f33 50%, var(--rolex-green) 100%);
+    background: url('images/hero-bg.svg') no-repeat center center;
+    background-size: cover;
     position: relative;
     overflow: hidden;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 10px,
-            rgba(255, 255, 255, 0.02) 10px,
-            rgba(255, 255, 255, 0.02) 20px
-        );
-    pointer-events: none;
 }
 
 /* Hero Logo Styling */
@@ -194,6 +177,8 @@ html {
    ========================================== */
 
 .section-title {
+    position: relative;
+    z-index: 1;
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--rolex-black);

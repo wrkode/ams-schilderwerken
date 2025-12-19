@@ -7,37 +7,9 @@
       <stop offset="100%" style="stop-color:#1E3A3F;stop-opacity:1" />
     </linearGradient>
     
-    <!-- Pattern for texture -->
-    <pattern id="diagonalLines" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="40" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
-    </pattern>
   </defs>
   
   <!-- Background -->
   <rect width="1920" height="1080" fill="url(#heroGradient)"/>
-  
-  <!-- Texture overlay -->
-  <rect width="1920" height="1080" fill="url(#diagonalLines)"/>
-  
-  <!-- Abstract paint strokes -->
-  <g opacity="0.15">
-    <path d="M 0 400 Q 480 350, 960 400 T 1920 400" 
-          stroke="#1E3A3F" 
-          stroke-width="80" 
-          fill="none" 
-          stroke-linecap="round"/>
-    <path d="M 0 600 Q 480 650, 960 600 T 1920 600" 
-          stroke="#d4af37" 
-          stroke-width="40" 
-          fill="none" 
-          stroke-linecap="round"/>
-  </g>
-  
-  <!-- Subtle geometric shapes -->
-  <g opacity="0.08">
-    <circle cx="1600" cy="200" r="150" fill="#1E3A3F"/>
-    <circle cx="300" cy="800" r="100" fill="#d4af37"/>
-    <rect x="1400" y="700" width="200" height="200" rx="20" fill="#1E3A3F"/>
-  </g>
 </svg>
 
