@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amsterdam Schilderwerken - Professional painting services in Amsterdam with a personal touch. Quality craftsmanship for interior and exterior projects.">
+    <title>Amsterdam Schilderwerken | Professional Painting Services</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rolex-black': '#0a0a0a',
+                        'rolex-green': '#1E3A3F',
+                        'charcoal': '#3a3a3a',
+                        'accent-gold': '#d4af37'
+                    },
+                    fontFamily: {
+                        'sans': ['Outfit', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="font-sans bg-gray-50 text-charcoal">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#home" class="flex items-center space-x-3">
+                        <div class="logo-container">
+                            <img src="images/ams-logo.png" alt="Amsterdam Schilderwerken Logo" class="h-12 w-auto">
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link" data-translate="nav.home">Home</a>
+                    <a href="#about" class="nav-link" data-translate="nav.about">About</a>
+                    <a href="#services" class="nav-link" data-translate="nav.services">Services</a>
+                    <a href="#portfolio" class="nav-link" data-translate="nav.portfolio">Portfolio</a>
+                    <a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a>
+                    
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-2 ml-4">
+                        <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
+                        <span class="text-gray-400">|</span>
+                        <button id="lang-nl" class="lang-btn" data-lang="nl">NL</button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <i data-feather="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-4 space-y-3">
+                <a href="#home" class="mobile-nav-link" data-translate="nav.home">Home</a>
+                <a href="#about" class="mobile-nav-link" data-translate="nav.about">About</a>
+                <a href="#services" class="mobile-nav-link" data-translate="nav.services">Services</a>
+                <a href="#portfolio" class="mobile-nav-link" data-translate="nav.portfolio">Portfolio</a>
+                <a href="#contact" class="mobile-nav-link" data-translate="nav.contact">Contact</a>
+                
+                <!-- Language Switcher Mobile -->
+                <div class="flex items-center space-x-3 pt-3 border-t">
+                    <button class="lang-btn-mobile active" data-lang="en">EN</button>
+                    <button class="lang-btn-mobile" data-lang="nl">NL</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section pt-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
+            <div class="max-w-4xl mx-auto text-center animate-fade-in">
+                <!-- Hero Logo -->
+                <div id="hero-logo" class="hero-logo-container mb-12">
+                    <img src="images/ams-logo.png" alt="Amsterdam Schilderwerken" class="hero-logo">
+                </div>
+                
+                <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-translate="hero.title">
+                    Quality Painting, Personal Service
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-10 leading-relaxed" data-translate="hero.subtitle">
+                    Professional painting services in Amsterdam with a personal touch. Every project is a partnership.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="btn btn-primary text-lg px-8 py-4" data-translate="hero.cta">
+                        Get Your Free Quote
+                    </a>
+                    <a href="#portfolio" class="btn btn-secondary text-lg px-8 py-4" data-translate="hero.ctaSecondary">
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="section-title" data-translate="about.title">About Amsterdam Schilderwerken</h2>
+                <p class="section-subtitle" data-translate="about.subtitle">Your Trusted Painting Partner</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-6 mb-16 fade-in-section">
+                <p class="text-lg text-gray-700 leading-relaxed" data-translate="about.text1">
+                    Welcome! I'm passionate about transforming spaces through quality painting work. At Amsterdam Schilderwerken, we believe that every project deserves personal attention and craftsmanship.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed" data-translate="about.text2">
+                    With years of experience in the painting industry, I take pride in building lasting relationships with my clients. Your vision becomes my mission, and I'm committed to delivering results that exceed expectations.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed" data-translate="about.text3">
+                    Whether it's a single room or an entire building, I approach every job with the same dedication and attention to detail. You're not just hiring a painter—you're gaining a partner who cares about your space as much as you do.
+                </p>
+            </div>
+            
+            <!-- Values Grid -->
+            <div class="fade-in-section">
+                <h3 class="text-2xl font-bold text-center mb-10" data-translate="about.values.title">What Makes Us Different</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i data-feather="award" class="w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3" data-translate="about.values.quality.title">Quality Craftsmanship</h4>
+                        <p class="text-gray-600" data-translate="about.values.quality.description">Meticulous attention to detail in every brush stroke</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i data-feather="heart" class="w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3" data-translate="about.values.personal.title">Personal Approach</h4>
+                        <p class="text-gray-600" data-translate="about.values.personal.description">Direct communication and tailored solutions for your needs</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i data-feather="dollar-sign" class="w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3" data-translate="about.values.transparent.title">Fully Transparent Pricing</h4>
+                        <p class="text-gray-600" data-translate="about.values.transparent.description">Clear cost breakdowns from day one—no hidden fees, no surprises, ever</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i data-feather="check-circle" class="w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3" data-translate="about.values.clean.title">Spotlessly Clean Finish</h4>
+                        <p class="text-gray-600" data-translate="about.values.clean.description">We leave your space immaculate, with professional cleaning and window washing included</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="section-title" data-translate="services.title">Our Services</h2>
+                <p class="section-subtitle" data-translate="services.subtitle">Comprehensive Painting Solutions</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i data-feather="home" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-translate="services.interior.title">Interior Painting</h3>
+                    <p class="text-gray-600" data-translate="services.interior.description">Transform your living and working spaces with precision interior painting. From single rooms to complete renovations.</p>
+                </div>
+                
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i data-feather="sun" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-translate="services.exterior.title">Exterior Painting</h3>
+                    <p class="text-gray-600" data-translate="services.exterior.description">Protect and beautify your property's exterior with weather-resistant finishes and expert technique.</p>
+                </div>
+                
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i data-feather="users" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-translate="services.residential.title">Residential Projects</h3>
+                    <p class="text-gray-600" data-translate="services.residential.description">Personalized painting services for homes, apartments, and living spaces of all sizes.</p>
+                </div>
+                
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i data-feather="briefcase" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-translate="services.commercial.title">Commercial Projects</h3>
+                    <p class="text-gray-600" data-translate="services.commercial.description">Professional painting for offices, retail spaces, and commercial properties with minimal disruption.</p>
+                </div>
+                
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i data-feather="star" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-translate="services.specialty.title">Specialty Finishes</h3>
+                    <p class="text-gray-600" data-translate="services.specialty.description">Decorative techniques, accent walls, and custom finishes to make your space unique.</p>
+                </div>
+                
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i data-feather="droplet" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-translate="services.consultation.title">Color Consultation</h3>
+                    <p class="text-gray-600" data-translate="services.consultation.description">Expert advice on color selection and combinations to achieve your desired atmosphere.</p>
+                </div>
+                
+                <div class="service-card fade-in-section service-card-featured">
+                    <div class="service-icon">
+                        <i data-feather="calendar" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-translate="services.maintenance.title">Maintenance Plans</h3>
+                    <p class="text-gray-600" data-translate="services.maintenance.description">Multi-year care programs with scheduled touch-ups and repainting. No surprises, no unexpected costs—just lasting beauty at a discounted rate.</p>
+                </div>
+                
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i data-feather="key" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-translate="services.propertyPrep.title">Property Preparation</h3>
+                    <p class="text-gray-600" data-translate="services.propertyPrep.description">Preparing homes for sale or rental. Professional painting and finishing that maximizes property value and attracts buyers or tenants quickly.</p>
+                </div>
+                
+                <div class="service-card fade-in-section">
+                    <div class="service-icon">
+                        <i data-feather="tool" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-translate="services.renovation.title">Renovation Work</h3>
+                    <p class="text-gray-600" data-translate="services.renovation.description">Complete renovation painting services with expert project management. We coordinate with other trades and deliver your renewed space on time and on budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="section-title" data-translate="portfolio.title">Our Work</h2>
+                <p class="section-subtitle" data-translate="portfolio.subtitle">Recent Projects & Transformations</p>
+            </div>
+            
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio items will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox hidden">
+        <div class="lightbox-content">
+            <button id="lightbox-close" class="lightbox-close">
+                <i data-feather="x" class="w-8 h-8"></i>
+            </button>
+            <button id="lightbox-prev" class="lightbox-nav lightbox-prev">
+                <i data-feather="chevron-left" class="w-10 h-10"></i>
+            </button>
+            <button id="lightbox-next" class="lightbox-nav lightbox-next">
+                <i data-feather="chevron-right" class="w-10 h-10"></i>
+            </button>
+            <img id="lightbox-image" src="" alt="Portfolio image">
+        </div>
+    </div>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="section-title" data-translate="contact.title">Get in Touch</h2>
+                <p class="section-subtitle" data-translate="contact.subtitle">Let's Discuss Your Project</p>
+                <p class="max-w-2xl mx-auto text-gray-600 mt-4" data-translate="contact.intro">
+                    Ready to transform your space? Fill out the form below and I'll get back to you within 24 hours. All consultations and quotes are free.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="fade-in-section">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="form-group">
+                            <label for="name" class="form-label" data-translate="contact.form.name">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input" data-translate-placeholder="contact.form.namePlaceholder" placeholder="John Smith" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label" data-translate="contact.form.email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" data-translate-placeholder="contact.form.emailPlaceholder" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label" data-translate="contact.form.phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" data-translate-placeholder="contact.form.phonePlaceholder" placeholder="+31 6 12345678">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="project-type" class="form-label" data-translate="contact.form.projectType">Project Type</label>
+                            <select id="project-type" name="project-type" class="form-input" required>
+                                <option value="interior" data-translate="contact.form.projectTypes.interior">Interior Painting</option>
+                                <option value="exterior" data-translate="contact.form.projectTypes.exterior">Exterior Painting</option>
+                                <option value="residential" data-translate="contact.form.projectTypes.residential">Residential</option>
+                                <option value="commercial" data-translate="contact.form.projectTypes.commercial">Commercial</option>
+                                <option value="consultation" data-translate="contact.form.projectTypes.consultation">Consultation Only</option>
+                                <option value="other" data-translate="contact.form.projectTypes.other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label" data-translate="contact.form.message">Tell Us About Your Project</label>
+                            <textarea id="message" name="message" rows="5" class="form-input" data-translate-placeholder="contact.form.messagePlaceholder" placeholder="Please describe your project, timeline, and any specific requirements..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-full text-lg py-4" data-translate="contact.form.submit">
+                            Send Message
+                        </button>
+                        
+                        <div id="form-message" class="hidden"></div>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="fade-in-section">
+                    <div class="bg-rolex-green text-white p-8 rounded-lg h-full">
+                        <h3 class="text-2xl font-bold mb-6" data-translate="contact.info.title">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0">
+                                    <i data-feather="map-pin" class="w-6 h-6 text-accent-gold"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-1">Address</p>
+                                    <p class="text-gray-100" data-translate="contact.info.address">Amsterdam, Netherlands</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0">
+                                    <i data-feather="phone" class="w-6 h-6 text-accent-gold"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-1">Phone</p>
+                                    <a href="tel:+31612345678" class="text-gray-100 hover:text-accent-gold transition-colors" data-translate="contact.info.phone">+31 6 1234 5678</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0">
+                                    <i data-feather="mail" class="w-6 h-6 text-accent-gold"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-1">Email</p>
+                                    <a href="mailto:info@amsterdamschilderwerken.nl" class="text-gray-100 hover:text-accent-gold transition-colors" data-translate="contact.info.email">info@amsterdamschilderwerken.nl</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0">
+                                    <i data-feather="clock" class="w-6 h-6 text-accent-gold"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-1">Business Hours</p>
+                                    <p class="text-gray-100" data-translate="contact.info.hours">Mon - Fri: 8:00 - 18:00</p>
+                                    <p class="text-gray-100" data-translate="contact.info.hoursSat">Sat: 9:00 - 15:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10 pt-8 border-t border-gray-100/20">
+                            <p class="text-gray-100 mb-4">Follow us on social media:</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="social-icon" aria-label="Facebook">
+                                    <i data-feather="facebook" class="w-6 h-6"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Instagram">
+                                    <i data-feather="instagram" class="w-6 h-6"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="LinkedIn">
+                                    <i data-feather="linkedin" class="w-6 h-6"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-rolex-black text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4" data-translate="footer.company">Amsterdam Schilderwerken</h4>
+                    <p class="text-gray-400" data-translate="footer.tagline">Quality painting services with a personal touch</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.links.title">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-accent-gold transition-colors" data-translate="nav.about">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-accent-gold transition-colors" data-translate="nav.services">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-accent-gold transition-colors" data-translate="nav.portfolio">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-accent-gold transition-colors" data-translate="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.social.title">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent-gold transition-colors" aria-label="Facebook">
+                            <i data-feather="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent-gold transition-colors" aria-label="Instagram">
+                            <i data-feather="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent-gold transition-colors" aria-label="LinkedIn">
+                            <i data-feather="linkedin" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; <span id="current-year"></span> <span data-translate="footer.company">Amsterdam Schilderwerken</span>. <span data-translate="footer.rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="scroll-top hidden">
+        <i data-feather="arrow-up" class="w-6 h-6"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
